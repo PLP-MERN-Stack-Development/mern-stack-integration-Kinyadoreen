@@ -68,6 +68,9 @@ Your work will be automatically submitted when you push to your GitHub Classroom
 3. Create the necessary React components and hooks
 4. Document your API and setup process in the README.md
 5. Include screenshots of your working application
+DEPLOYMENT
+FRONTED: https://app.netlify.com/projects/rad-paprenjak-0790e4/deploys/690384510f8bd1f19575dda9
+BACKEND: https://mern-stack-integration-kinyadoreen-1.onrender.com
 
 ## Resources
 
