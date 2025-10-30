@@ -7,10 +7,12 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const path = require('path');
 
+
 // Import routes
 const postRoutes = require('./routes/posts');
-const categoryRoutes = require('./routes/categories');
 const authRoutes = require('./routes/auth');
+const categoryRoutes = require('./routes/categories');
+
 
 // Load environment variables
 dotenv.config();
@@ -23,6 +25,12 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+
+// Comment these temporarily:
+app.use('/api/posts', postRoutes);
+app.use('/api/auth', authRoutes);
+// app.use('/api/categories', categoryRoutes);
 
 // Serve uploaded files
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
