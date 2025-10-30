@@ -43,6 +43,15 @@ if (process.env.NODE_ENV === 'development') {
   });
 }
 
+const path = require('path');
+
+// Serve React build
+app.use(express.static(path.join(__dirname, '../client/dist')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../client/dist', 'index.html'));
+});
+
 // API routes
 app.use('/api/posts', postRoutes);
 app.use('/api/categories', categoryRoutes);
